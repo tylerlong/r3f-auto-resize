@@ -11,3 +11,5 @@ Which means, we need to set the camera zoom value peoperly. We calculate the zoo
 After we have the zoom value, wen can calalate the world width by the canvas width and the zoom value.
 
 Final result is: we have the zoom value, the world width, and the world height. We can use them to create a perfect 3d world that always fit the canvas.
+
+有一个好处是, 页面任意调整大小, 内容都能自动缩放适应. 因为world height是固定的. 更新页面高度只会修改 zoom value.
