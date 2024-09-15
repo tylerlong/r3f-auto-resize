@@ -11,7 +11,7 @@ export class Store {
     return (this.canvasSize.height / rows) * 2 ** 0.5;
   }
 
-  public get arenaSize(): { width: number; height: number } {
+  public get worldSize(): { width: number; height: number } {
     const height = rows;
     const width = this.canvasSize.width / this.zoom;
     return { width, height };

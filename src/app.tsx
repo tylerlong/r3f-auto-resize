@@ -6,7 +6,7 @@ import type { Store } from './store';
 
 const App = auto((props: { store: Store }) => {
   const { store } = props;
-  const { arenaSize } = store;
+  const { worldSize } = store;
 
   console.log('App render');
   return (
@@ -23,26 +23,26 @@ const App = auto((props: { store: Store }) => {
       <ambientLight intensity={0.5} />
       <directionalLight position={[50, 50, 50]} intensity={2} />
       <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0, 0]}>
-        <planeGeometry args={[arenaSize.width, arenaSize.height]} />
+        <planeGeometry args={[worldSize.width, worldSize.height]} />
         <meshStandardMaterial color="skyblue" />
       </mesh>
-      <mesh position={[-arenaSize.width / 2 + 0.5, 0, -2]}>
+      <mesh position={[-worldSize.width / 2 + 0.5, 0, -2]}>
         <boxGeometry args={[1, 1, 1]} />
         <meshStandardMaterial color="red" />
       </mesh>
-      <mesh position={[-arenaSize.width / 2 + 0.5, 0, -1]}>
+      <mesh position={[-worldSize.width / 2 + 0.5, 0, -1]}>
         <boxGeometry args={[1, 1, 1]} />
         <meshStandardMaterial color="green" />
       </mesh>
-      <mesh position={[-arenaSize.width / 2 + 0.5, 0, 0]}>
+      <mesh position={[-worldSize.width / 2 + 0.5, 0, 0]}>
         <boxGeometry args={[1, 1, 1]} />
         <meshStandardMaterial color="blue" />
       </mesh>
-      <mesh position={[-arenaSize.width / 2 + 0.5, 0, 1]}>
+      <mesh position={[-worldSize.width / 2 + 0.5, 0, 1]}>
         <boxGeometry args={[1, 1, 1]} />
         <meshStandardMaterial color="yellow" />
       </mesh>
-      <mesh position={[-arenaSize.width / 2 + 0.5, 0, 2]}>
+      <mesh position={[-worldSize.width / 2 + 0.5, 0, 2]}>
         <boxGeometry args={[1, 1, 1]} />
         <meshStandardMaterial color="purple" />
       </mesh>
